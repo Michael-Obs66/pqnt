@@ -1,0 +1,42 @@
+name: Build and Publish pqnt to PyPI
+
+on:
+  push:
+    tags:
+      - "v*.*.*"    # Publish ketika ada tag versi, contoh: v0.1.0
+  workflow_dispatch: # Bisa run manual
+
+permissions:
+  id-token: write   # Wajib untuk Trusted Publisher PyPI
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install build dependencies
+        run: |
+          pip install --upgrade pip
+          pip install build pybind11 scikit-build-core
+
+      - name: Build wheel and sdist
+        run: |
+          python -m build
+
+      - name: Show dist files
+        run: |
+          ls -lh dist
+
+      - name: Publish to PyPI via Trusted Publisher
+        uses: pypa/gh-action-pypi-publish@v1.9.0
+        with:
+          print_hash: true
