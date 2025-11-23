@@ -1,0 +1,20 @@
+[build-system]                                                              
+requires = [
+    "scikit-build-core>=0.11",
+    "setuptools>=61",
+    "wheel",
+    "pybind11>=2.11",
+]
+build-backend = "scikit_build_core.build"
+ 
+[project]
+name = "pqnt"
+version = "0.1.0"
+description = "Power-Transform Quantization Engine (C++/Pybind11)"
+authors = [{ name = "Michael Anggi Gilang Angkasa" }]
+requires-python = ">=3.8"
+dependencies = ["numpy"]
+
+[tool.scikit-build]
+build-dir = "build"
+build.verbose = true
