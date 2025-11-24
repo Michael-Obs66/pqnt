@@ -26,7 +26,7 @@ Quantization converts FP32 values into INT8 to reduce:
 
 ---
 
-# ⚠️ 2. Why Do Standard Methods Fail?
+# ⚠️ 2. Compare using standard method
 
 Typical PTQ (MinMax, Percentile, StdClip) struggle because distributions are:
 
