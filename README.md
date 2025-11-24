@@ -49,9 +49,8 @@ PQNT introduces a **pre-quantization non-linear shaping** to compress extreme va
 
 ### ✔ 3.1 Power Transform
 
-\[
-t = \text{sign}(x) \cdot |x|^p
-\]
+<img width="134" height="33" alt="image" src="https://github.com/user-attachments/assets/4c60c5ed-d024-40e6-aedf-483a96248fea" />
+
 
 For \( p < 1 \):  
 - Outliers shrink  
@@ -60,24 +59,17 @@ For \( p < 1 \):
 
 ### ✔ 3.2 INT8 Symmetric Quantization
 
-\[
-s = \frac{\max(|t|)}{127}
-\]
-\[
-q = \text{clip}\left( \left\lfloor \frac{t}{s} \right\rceil, -128, 127 \right)
-\]
+<img width="127" height="53" alt="image" src="https://github.com/user-attachments/assets/850d4e0d-d7cd-40c4-a824-81ea2c602430" />
+<img width="240" height="65" alt="image" src="https://github.com/user-attachments/assets/a0e5bc77-8e7d-4a2d-b33e-2d65bea298c0" />
 
 ### ✔ 3.3 Dequantization
 
-\[
-\tilde{t} = q \cdot s
-\]
+<img width="117" height="50" alt="image" src="https://github.com/user-attachments/assets/3b5a4b54-6f20-47fe-b0c4-c970482722d2" />
+
 
 ### ✔ 3.4 Inverse Transform
 
-\[
-\hat{x} = \text{sign}(\tilde{t}) \cdot |\tilde{t}|^{1/p}
-\]
+<img width="155" height="53" alt="image" src="https://github.com/user-attachments/assets/c554ed6b-0d6e-49ae-9be5-ccecebc0d1e2" />
 
 This returns values near their original domain.
 
@@ -108,13 +100,6 @@ Across CNN/Transformer families (ResNet, MobileNet, ViT, Swin):
 - Ninja (recommended)
 - A modern C++17 compiler (`g++`, `clang`, or FreeBSD's `cc`)
 - pybind11  
-
-
-Install dependencies:
-
-```
-pip install scikit-build-core pybind11 numpy
-```
 
 ---
 
