@@ -93,6 +93,10 @@ Across CNN/Transformer families (ResNet, MobileNet, ViT, Swin):
 - PQNT outperforms MinMax, Percentile, ACIQ, KLD, SmoothQuant-lite
 
 ---
+<img width="847" height="299" alt="image" src="https://github.com/user-attachments/assets/6b31605c-5e0f-42b7-8cd7-4e6b08722e9f" />
+<img width="1151" height="700" alt="image" src="https://github.com/user-attachments/assets/2865c1b3-06cc-47d5-9225-29862ffd0f0e" />
+<img width="979" height="547" alt="image" src="https://github.com/user-attachments/assets/fc8e2d96-38ce-4935-9d34-3e01bd9ff055" />
+<img width="1160" height="602" alt="image" src="https://github.com/user-attachments/assets/3c810474-0033-4937-b723-3b49f66d0b53" />
 
 # 🛠 5. Build From Source
 
