@@ -205,7 +205,6 @@ pqnt/
   ├── external/setup_external.sh
   ├── include/pqnt.hpp
   ├── src/bindings.cpp
-  ├── src/bindings.cpp
   ├── src/main.cpp
   ├── src/pqnt.cpp
   .gitignore
