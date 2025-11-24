@@ -1,4 +1,4 @@
-<img width="1024" height="1024" alt="ChatGPT Image 24 Nov 2025, 14 43 37" src="https://github.com/user-attachments/assets/eadf7202-1325-4a6f-86ee-6176b5717ad0" />
+<img width="847" height="314" alt="image" src="https://github.com/user-attachments/assets/5a8e194e-82e1-44fe-91a7-e492a8df0cff" />
 
 # pqnt — Power-Law Quantization Engine  
 C++ Core + Pybind11 Python API (Source Build Edition)
